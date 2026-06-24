@@ -249,7 +249,6 @@ export default function App() {
   const statItems = [
     { label:"الإجمالي",   value:S.total,          sub:"بطاقة", accent:T.teal    },
     { label:"البحث",      value:S.shown,          sub:"نتيجة", accent:"#fff"    },
-    { label:"رصيد صفري", value:S.zero,           sub:"بطاقة", accent:"#FFD580" },
     { label:"رصيد +50",  value:S.high,           sub:"بطاقة", accent:"#FF8A80" },
     { label:"مجموع",     value:S.sum.toFixed(1), sub:"ر.س",   accent:T.gold    },
   ];
