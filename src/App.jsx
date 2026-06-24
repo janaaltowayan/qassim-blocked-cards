@@ -326,10 +326,10 @@ export default function App() {
             {/* ── Centre title ── */}
             <div style={{ textAlign:"center", flex:1, minWidth:0 }}>
               <div className="header-title" style={{ fontSize:19, fontWeight:800, color:"#fff", lineHeight:1.3 }}>
-                قائمة البطاقات المحظورة
+                سجل البطاقات المحظورة
               </div>
               <div style={{ fontSize:11, color:"rgba(255,255,255,0.42)", marginTop:4, letterSpacing:0.4 }}>
-              مخالفات انظمة الاشتراكات في مشروع النقل العام في القصيم
+              مخالفات انظمة الأشتراكات في مشروع النقل العام في القصيم
               </div>
             </div>
 
