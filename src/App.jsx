@@ -95,9 +95,9 @@ const cards = [
   { id:81, type:"بطاقة خصم طالب",             phone:"966501313476",  cardNum:"2502046303",         balance:0.04,   lastUsed:"16.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/1V0tXVQpoiuolaZa9ZXr4MEQz3Bk_ASGx?usp=drive_link" },
   { id:82, type:"اشتراك شهري",                phone:"966595761276",  cardNum:"9966001699119283",   balance:0,      lastUsed:"24.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/1wd06pBYUtspJEZCVx9JCGs9W4n112ghN?usp=drive_link" },
   { id:83, type:"اشتراك يومي",                phone:"966540605017",  cardNum:"9966001699125214",   balance:38.6,   lastUsed:"30.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/1RJN9DQjm8L_jeqPeOq5IBeNi9ZOYbzBT?usp=drive_link" },
-  { id:84, type:"اشتراك اسبوعي",              phone:"966540471183",  cardNum:"9966001699185090",   balance:0.5,    lastUsed:"06.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1Z9UA8hjsiDxdsJkxioFBMa8t0-QpMDaW?usp=drive_link" },
-  { id:85, type:"اشتراك اسبوعي",              phone:"966573812480",  cardNum:"9966001799092170",   balance:3.2,    lastUsed:"06.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1xQSEKe6rnk8aIyKsSjgHvp-_eToU6Ks2?usp=drive_link" },
-  { id:86, type:"بطاقة خصم احتياجات خاصة",   phone:"966508875836",  cardNum:"2502036870",         balance:41.82,  lastUsed:"04.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1HfOxWUL5DXwuyWldqtoIpm1x3R889OAZ?usp=drive_link" },
+  { id:84, type:"اشتراك أسبوعي",              phone:"966540471183",  cardNum:"9966001699185090",   balance:0.5,    lastUsed:"06.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1Z9UA8hjsiDxdsJkxioFBMa8t0-QpMDaW?usp=drive_link" },
+  { id:85, type:"اشتراك أسبوعي",              phone:"966573812480",  cardNum:"9966001799092170",   balance:3.2,    lastUsed:"06.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1xQSEKe6rnk8aIyKsSjgHvp-_eToU6Ks2?usp=drive_link" },
+  { id:86, type:"بطاقة خصم إحتياجات خاصة",   phone:"966508875836",  cardNum:"2502036870",         balance:41.82,  lastUsed:"04.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1HfOxWUL5DXwuyWldqtoIpm1x3R889OAZ?usp=drive_link" }
 ];
 
 const TYPE_META = {
@@ -110,7 +110,7 @@ const TYPE_META = {
 };
 const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 
-const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
+const TYPES = ["الكل","بطاقة خصم إحتياجات خاصة","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
 const QassimLogo = () => (
   <svg viewBox="0 0 44 44" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
