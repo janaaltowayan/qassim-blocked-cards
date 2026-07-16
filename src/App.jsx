@@ -111,16 +111,11 @@ const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
 const QassimLogo = () => (
-  <img src="qassim-buss.png" style={{ width:130, height:40, objectFit:"contain" }} />
+  <img src="qassim-buss2.png" style={{ width:130, height:40, objectFit:"contain" }} />
 );
 
 const SaptcoLogo = () => (
-  <svg viewBox="0 0 44 44" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="22,3 25.5,13.5 36.5,13.5 27.5,20 31,30.5 22,24 13,30.5 16.5,20 7.5,13.5 18.5,13.5"
-      fill="none" stroke={T.gold} strokeWidth="2.2" strokeLinejoin="round"/>
-    <polygon points="22,9 24.5,16.5 32,16.5 26,21 28.5,28.5 22,24 15.5,28.5 18,21 12,16.5 19.5,16.5"
-      fill={T.gold} opacity="0.2"/>
-  </svg>
+    <img src="saptco-logo2.png" style={{ width:130, height:40, objectFit:"contain" }} />
 );
 
 /* ── MOBILE CARD ── */
