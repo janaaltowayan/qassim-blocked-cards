@@ -321,7 +321,7 @@ export default function App() {
             }}>
               <QassimLogo/>
               <div className="logo-text">
-                <div style={{ fontSize:12, fontWeight:800, color:"#fff", lineHeight:1.2 }}>حافلات القصيم</div>
+                <div style={{ fontSize:12, fontWeight:800, color:"#fff", lineHeight:1.2 }}>  <img src="qassim-buss2.png" style={{ width:130, height:40, objectFit:"contain" }} /></div>
                 <div style={{ fontSize:9, color:T.teal, letterSpacing:1.2, marginTop:1 }}>QASSIM BUS</div>
               </div>
             </div>
