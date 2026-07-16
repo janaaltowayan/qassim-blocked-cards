@@ -115,7 +115,7 @@ const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","�
 
 const QassimLogo = () => (
   <img src="qassim-buses.png" alt="حافلات القصيم"
-    style={{ width:150, height:60, objectFit:"contain" }} />
+    style={{ width:150, height:50, objectFit:"contain" }} />
 );
 
 const SaptcoLogo = () => (
