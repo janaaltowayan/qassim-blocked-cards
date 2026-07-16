@@ -10,6 +10,7 @@ const T = {
   danger:"#B71C1C", success:"#1B5E20", muted:"#9EADB3",
 };
 
+/* ── DATA ── */
 const cards = [
   { id:1,  type:"اشتراك شهري",         phone:"966549914480",  cardNum:"2303209461",         balance:1.05,   lastUsed:"18.07.2025", evidenceUrl:"https://drive.google.com/drive/folders/1BZ2Dhw91CvMEvflahQ5A0l_nMA7dLFc2?usp=drive_link" },
   { id:2,  type:"اشتراك أسبوعي",       phone:"966502885687",  cardNum:"9966001699096255",   balance:3.10,   lastUsed:"30.06.2025", evidenceUrl:"https://drive.google.com/drive/folders/1JThUCanrmRuMqpJw2lZgS19bEHML44g0?usp=drive_link" },
@@ -99,7 +100,6 @@ const cards = [
   { id:86, type:"بطاقة خصم إحتياجات خاصة",   phone:"966508875836",  cardNum:"2502036870",         balance:41.82,  lastUsed:"04.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1HfOxWUL5DXwuyWldqtoIpm1x3R889OAZ?usp=drive_link" }
 ];
 
-
 const TYPE_META = {
   "اشتراك يومي":          { bg:"#E2F5F8", color:"#0D5F6E", dot:T.teal    },
   "اشتراك أسبوعي":        { bg:"#E6F2EC", color:"#1A5C35", dot:"#2ECC71" },
@@ -111,17 +111,16 @@ const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
-/* شعار حافلات القصيم    
 const QassimLogo = () => (
-  
+  <img src="qassim-logo2.png" alt="حافلات القصيم"
+    style={{ width:150, height:44, objectFit:"contain" }} />
 );
-/*
 
-/* شعار سابتكو     
 const SaptcoLogo = () => (
-
+  <img src="saptco-logo2.png" alt="سابتكو"
+    style={{ width:150, height:44, objectFit:"contain" }} />
 );
-*/
+
 /* ── MOBILE CARD ── */
 const MobileCard = ({ c }) => {
   const meta = tm(c.type);
@@ -282,7 +281,7 @@ export default function App() {
           .mp{padding:10px!important}
           .logo-row{flex-direction:row!important;justify-content:space-between!important;gap:8px!important}
           .logo-box{flex:1!important;padding:7px 10px!important}
-          .logo-box img{width:70px!important;height:28px!important;object-fit:contain!important}
+          .logo-box img{width:100px!important;height:32px!important;object-fit:contain!important}
           .logo-text{display:none!important}
           .header-title{font-size:15px!important;margin:8px 0 4px!important}
           .header-sub{font-size:10px!important}
@@ -303,30 +302,18 @@ export default function App() {
           <div className="logo-row" style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:12, marginBottom:12 }}>
             {/* Qassim */}
             <div className="logo-box" style={{
-              display:"flex", alignItems:"center", gap:8,
               background:"rgba(34,184,209,0.08)", border:"1px solid rgba(34,184,209,0.22)",
-              borderRadius:12, padding:"9px 13px", flexShrink:0,
+              borderRadius:12, padding:"10px 16px", flexShrink:0,
             }}>
               <QassimLogo/>
-              <div className="logo-text">
-                <div style={{ fontSize:12, fontWeight:800, color:"#fff", lineHeight:1.2 }}>          <img src="qassim-buss2.png" style={{ width:130, height:40, objectFit:"contain" }} />
-                 </div>
-                <div style={{ fontSize:9, color:T.teal, letterSpacing:1.2, marginTop:1 }}>                            </div>
-              </div>
             </div>
 
             {/* SAPTCO */}
             <div className="logo-box" style={{
-              display:"flex", alignItems:"center", gap:8,
               background:"rgba(201,162,39,0.08)", border:"1px solid rgba(201,162,39,0.22)",
-              borderRadius:12, padding:"9px 13px", flexShrink:0,
+              borderRadius:12, padding:"10px 16px", flexShrink:0,
             }}>
               <SaptcoLogo/>
-              <div className="logo-text">
-                <div style={{ fontSize:12, fontWeight:800, color:"#fff", lineHeight:1.2 }}>  <img src="saptco.png" style={{ width:130, height:40, objectFit:"contain" }} />
-</div>
-                <div style={{ fontSize:9, color:T.gold, letterSpacing:1.5, marginTop:1 }}></div>
-              </div>
             </div>
           </div>
 
