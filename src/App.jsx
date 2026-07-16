@@ -318,10 +318,10 @@ export default function App() {
             }}>
               <SaptcoLogo/>
               <div className="logo-text">
-                <div style={{ fontSize:12, fontWeight:800, color:"#fff", lineHeight:1.2 }}>سابتكو</div>
-                <div style={{ fontSize:9, color:T.gold, letterSpacing:1.5, marginTop:1 }}>SAPTCO</div>
+               /* <div style={{ fontSize:12, fontWeight:800, color:"#fff", lineHeight:1.2 }}></div>
+                <div style={{ fontSize:9, color:T.gold, letterSpacing:1.5, marginTop:1 }}></div>
               </div>
-            </div>
+            </div>* /
           </div>
 
           {/* title */}
