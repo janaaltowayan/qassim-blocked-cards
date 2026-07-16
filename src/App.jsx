@@ -321,8 +321,8 @@ export default function App() {
 
           {/* title */}
           <div style={{ textAlign:"center" }}>
-            <div className="header-title" style={{ fontSize:18, fontWeight:800, color:"#fff" }}>سجل البطاقات المحظورة</div>
-            <div className="header-sub" style={{ fontSize:11, color:"rgba(255,255,255,0.4)", marginTop:3 }}>مخالفات أنظمة الاشتراك</div>
+            <div className="header-title" style={{ fontSize:18, fontWeight:800, color:"#fff" }}>قائمة البطاقات المحظورة</div>
+            <div className="header-sub" style={{ fontSize:11, color:"rgba(255,255,255,0.4)", marginTop:3 }}>البطاقات المحظورة بسبب مخالفة سياسة الاشتراكات في مشروع حافلات القصيم</div>
           </div>
         </div>
 
