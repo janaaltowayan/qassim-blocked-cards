@@ -114,7 +114,7 @@ const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
 const QassimLogo = () => (
-  <img src="qassim-buss.png" alt="حافلات القصيم"
+  <img src="qassim-buses.png" alt="حافلات القصيم"
     style={{ width:150, height:44, objectFit:"contain" }} />
 );
 
