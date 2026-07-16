@@ -111,16 +111,17 @@ const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
-/* شعار حافلات القصيم    */
+/* شعار حافلات القصيم    
 const QassimLogo = () => (
   
 );
+/*
 
-/* شعار سابتكو     */
+/* شعار سابتكو     
 const SaptcoLogo = () => (
 
 );
-
+*/
 /* ── MOBILE CARD ── */
 const MobileCard = ({ c }) => {
   const meta = tm(c.type);
