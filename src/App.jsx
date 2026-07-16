@@ -111,13 +111,7 @@ const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
 const QassimLogo = () => (
-  <svg viewBox="0 0 44 44" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="22,2 38,11 38,33 22,42 6,33 6,11" fill="none" stroke={T.teal} strokeWidth="2.5" strokeLinejoin="round"/>
-    <line x1="6"  y1="22" x2="14" y2="22" stroke={T.teal} strokeWidth="2.5"/>
-    <line x1="30" y1="22" x2="38" y2="22" stroke={T.teal} strokeWidth="2.5"/>
-    <line x1="22" y1="2"  x2="22" y2="12" stroke={T.teal} strokeWidth="2.5"/>
-    <circle cx="22" cy="22" r="4" fill={T.teal} opacity="0.2"/>
-  </svg>
+  <img src="qassim-buss.png" style={{ width:130, height:40, objectFit:"contain" }} />
 );
 
 const SaptcoLogo = () => (
