@@ -97,7 +97,9 @@ const cards = [
   { id:83, type:"اشتراك يومي",                phone:"966540605017",  cardNum:"9966001699125214",   balance:38.6,   lastUsed:"30.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/1RJN9DQjm8L_jeqPeOq5IBeNi9ZOYbzBT?usp=drive_link" },
   { id:84, type:"اشتراك أسبوعي",              phone:"966540471183",  cardNum:"9966001699185090",   balance:0.5,    lastUsed:"06.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1Z9UA8hjsiDxdsJkxioFBMa8t0-QpMDaW?usp=drive_link" },
   { id:85, type:"اشتراك أسبوعي",              phone:"966573812480",  cardNum:"9966001799092170",   balance:3.2,    lastUsed:"06.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1xQSEKe6rnk8aIyKsSjgHvp-_eToU6Ks2?usp=drive_link" },
-  { id:86, type:"بطاقة خصم إحتياجات خاصة",   phone:"966508875836",  cardNum:"2502036870",         balance:41.82,  lastUsed:"04.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1HfOxWUL5DXwuyWldqtoIpm1x3R889OAZ?usp=drive_link" }
+  { id:86, type:"بطاقة خصم إحتياجات خاصة",   phone:"966508875836",  cardNum:"2502036870",         balance:41.82,  lastUsed:"04.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1HfOxWUL5DXwuyWldqtoIpm1x3R889OAZ?usp=drive_link" },
+  { id:87, type:"اشتراك شهري",                phone:"966541794108",  cardNum:"9966001699018111",   balance:9.05,   lastUsed:"14.07.2026", evidenceUrl:"https://drive.google.com/drive/folders/1GJCwK_nb9gke-YmBi8HRWvETUM1Vinwb?usp=drive_link" },
+  { id:88, type:"اشتراك شهري",                phone:"966537897114",  cardNum:"9966001699111816",   balance:0,  lastUsed:"12.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/186F_hu5-bLds-9TERYsOw3a0ovXayRtl?usp=drive_link" }
 ];
 
 const TYPE_META = {
