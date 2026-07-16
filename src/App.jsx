@@ -111,27 +111,14 @@ const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن"];
 
-/* شعار حافلات القصيم — الشكل السداسي المقطّع */
+/* شعار حافلات القصيم    */
 const QassimLogo = () => (
   
 );
 
-/* شعار سابتكو — النجمة ذات الأشعة */
+/* شعار سابتكو     */
 const SaptcoLogo = () => (
-  <svg viewBox="0 0 60 60" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-    {/* النجمة الخارجية — 8 أشعة */}
-    <path
-      d="M30 4 L34 22 L52 18 L40 30 L52 42 L34 38 L30 56 L26 38 L8 42 L20 30 L8 18 L26 22 Z"
-      fill={T.gold} opacity="0.9"
-    />
-    {/* الدائرة الداخلية */}
-    <circle cx="30" cy="30" r="8" fill={T.goldDark}/>
-    {/* أشعة إضافية للتفصيل */}
-    <path
-      d="M30 4 L34 22 L52 18 L40 30 L52 42 L34 38 L30 56 L26 38 L8 42 L20 30 L8 18 L26 22 Z"
-      fill="none" stroke={T.goldDark} strokeWidth="1" opacity="0.5"
-    />
-  </svg>
+  
 );
 
 /* ── MOBILE CARD ── */
@@ -374,7 +361,7 @@ export default function App() {
           <span style={{ position:"absolute", right:11, top:"50%", transform:"translateY(-50%)", color:T.t3, fontSize:13 }}>🔍</span>
           <input
             value={search} onChange={e=>setSearch(e.target.value)}
-            placeholder="رقم الهاتف · رقم البطاقة · الرقم التسلسلي..."
+            placeholder="رقم الهاتف · رقم البطاقة ..."
             style={{
               width:"100%", padding:"9px 34px 9px 30px",
               border:`1.5px solid ${T.line}`, borderRadius:10,
