@@ -104,6 +104,9 @@ const cards = [
   { id:90, type:"بطاقة خصم طالب",             phone:"966576044057",  cardNum:"2502046778",         balance:7.96,   lastUsed:"25.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1nP-wE9gfAs0SRj9eXXiBxfVFSJBhhPX7?usp=drive_link" },
   { id:91, type:"اشتراك يومي",                phone:"966573445643",  cardNum:"9966001699121566",   balance:0,      lastUsed:"24.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1C-in4p5vAnztV2gaC3QyyjqJzDlQ3tJD?usp=drive_link" },
   { id:92, type:"بطاقة خصم طالب",             phone:"966533607134",  cardNum:"2502046343",         balance:2.33,   lastUsed:"28.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1COGOhu9aq3VecrouiXgHCj40GCduLStn?usp=drive_link" },
+  { id:93, type:"اشتراك يومي",                phone:"966510646185",  cardNum:"9966001699102995",   balance:7.30,   lastUsed:"05.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1Mod_bWHqFaZiJ9uOBR-eYUtZojA3HJYs?usp=drive_link" },
+  { id:94, type:"بطاقة خصم طالب",             phone:"966576044057",  cardNum:"2502046778",         balance:1.08,   lastUsed:"30.07.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1SgFU4PGeQ200RZAJuy_eulHNZaBZSJi9?usp=drive_link" },
+  { id:96, type:"اشتراك شهري",                phone:"966566179090",  cardNum:"9966001699011127",   balance:0,      lastUsed:"05.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1I9QsLcr77SdVO462wyviKVRoruEXmo7v?usp=drive_link" },
 ];
 
 const TYPE_META = {
