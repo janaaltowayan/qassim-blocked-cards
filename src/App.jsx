@@ -109,6 +109,11 @@ const cards = [
   { id:95, type:"اشتراك يومي",                phone:"966582292093",  cardNum:"9966001699005504",   balance:9.10,   lastUsed:"06.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1ap2L_asDQ5oFA3ONxd2tppEnnDBBI84H?usp=drive_link" },
   { id:96, type:"اشتراك يومي",                phone:"966567343080",  cardNum:"9966001699182548",   balance:0,      lastUsed:"06.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1QpAyaiss-Ob0Kk-JPU9XmWDaTJ_W8E71?usp=drive_link" },
   { id:97, type:"اشتراك يومي",                phone:"966572201140",  cardNum:"9966001699127002",   balance:0,      lastUsed:"11.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1buEu12K_gUblynM4rPeMCnMDSMjuRujK?usp=drive_link" },
+  { id:98, type:"اشتراك يومي",                phone:"966532448921",  cardNum:"9966001699126848",   balance:3.10,   lastUsed:"12.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1XrB70fRDN1_p4pGMpq9Vr_TWPoYFRxiX?usp=drive_link" },
+  { id:99, type:"اشتراك شهري",                phone:"966506871056",  cardNum:"9966001699127309",   balance:0,      lastUsed:"12.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1I8UZoTm9w6OC-xuUk2ytsjIYuXY8apai?usp=drive_link" },
+  { id:100,type:"اشتراك يومي",                phone:"966593397694",  cardNum:"9966001699125995",   balance:16.55,  lastUsed:"18.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1R9j8HXOOMh9KaTsLBzLX1lUJ7bG8y-9x?usp=drive_link" },
+  { id:101,type:"اشتراك يومي",                phone:"966546419426",  cardNum:"9966001699127569",   balance:4.40,   lastUsed:"18.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1LXK4YS8nAVQWiPpa-CyXOVDJwoZl8lpw?usp=drive_link" },
+
 ];
 
 
