@@ -113,6 +113,7 @@ const cards = [
   { id:99, type:"اشتراك شهري",                phone:"966506871056",  cardNum:"9966001699127309",   balance:0,      lastUsed:"12.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1I8UZoTm9w6OC-xuUk2ytsjIYuXY8apai?usp=drive_link" },
   { id:100,type:"اشتراك يومي",                phone:"966593397694",  cardNum:"9966001699125995",   balance:16.55,  lastUsed:"18.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1R9j8HXOOMh9KaTsLBzLX1lUJ7bG8y-9x?usp=drive_link" },
   { id:101,type:"اشتراك يومي",                phone:"966546419426",  cardNum:"9966001699127569",   balance:4.40,   lastUsed:"18.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1LXK4YS8nAVQWiPpa-CyXOVDJwoZl8lpw?usp=drive_link" },
+  { id:102,type:"بطاقة خصم طالب",             phone:"966579261718",  cardNum:"2502046794",         balance:31.40,  lastUsed:"24.08.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1EZwrtpQhk7z7mH8vjJO_sixNnUz-43fH?usp=drive_link" },
 
 ];
 
