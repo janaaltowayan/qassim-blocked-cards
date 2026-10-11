@@ -142,9 +142,7 @@ const cards = [
   { id:128,type:"اشتراك شهري",                phone:"966561500256",  cardNum:"9966001699123050",   balance:5.15,   lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1iOQSwFZrMDWd85vV3vcMteEhSo6wu2Em?usp=drive_link" },
   { id:129,type:"اشتراك شهري",                phone:"966561914016",  cardNum:"2303197700",         balance:5.00,   lastUsed:"05.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1uLGAp2xMTDvUgGNxsPIRQNCTr43bTq4s?usp=drive_link" },
   { id:130,type:"اشتراك شهري",                phone:"966545647200",  cardNum:"2303127605",         balance:10.60,  lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1r1eFP3B4Qs4whb8nYBglWhqdaKTNOsBV?usp=drive_link" },
-  { id:131,type:"اشتراك شهري",                phone:"966552200084",  cardNum:"9966001699116710",   balance:0.05,   lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1gRoW21UgVnoDOpIKOt_XpDXeCma8nEya?usp=drive_link" },
-  { id:132,type:"اشتراك شهري",                phone:"966576625790",  cardNum:"2303197687",         balance:0.05,   lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1tKOuZDhJKIui2gt87A4avyoSzg4Ov6C0?usp=drive_link" },
-
+  { id:131,type:"اشتراك شهري",                phone:"966576625790",  cardNum:"2303197687",         balance:0.05,   lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1tKOuZDhJKIui2gt87A4avyoSzg4Ov6C0?usp=drive_link" },
 ];
 
 
