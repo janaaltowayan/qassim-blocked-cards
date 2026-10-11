@@ -82,10 +82,10 @@ const cards = [
   { id:68, type:"بطاقة خصم كبار السن", phone:"966509083184",  cardNum:"2502046225",         balance:26.21,  lastUsed:"03.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1DMo-54vNCnq9HB-C5NZv9FIRUKXTPQuC?usp=drive_link" },
   { id:69, type:"بطاقة خصم طالب",      phone:"966536529862",  cardNum:"2502046541",         balance:11.84,  lastUsed:"30.04.2026", evidenceUrl:"https://drive.google.com/drive/folders/1KPOvwYXL3RBmB5SpvkWiHEjxJBGZ5Odj?usp=drive_link" },
   { id:70, type:"بطاقة خصم طالب",      phone:"966569273742",  cardNum:"2502046340",         balance:11.84,  lastUsed:"13.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1utrreGH6Tmz_EI7BQL126o-KJmYVFP-q?usp=drive_link" },
-  { id:71, type:"اشتراك يومي",         phone:"966547824955",  cardNum:"9966001699065399",   balance:1.10,   lastUsed:"17.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/13mzJ4iif1WBElY-Hd5eMp9P_e0-fiHeZ?usp=drive_link" },
-  { id:72, type:"اشتراك أسبوعي",       phone:"966569226493",  cardNum:"9966001699031858",   balance:0.40,   lastUsed:"16.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1miHXHu2jZAI7zqk_2-_d_3sLT1hu4eQZ?usp=drive_link" },
-  { id:73, type:"اشتراك يومي",         phone:"966549485005",  cardNum:"9966001699120932",   balance:6.55,   lastUsed:"20.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1ubnub8Ba87O1kVWn47DKYuIAu9vwGT6Q?usp=drive_link" },
-  { id:74, type:"اشتراك يومي",         phone:"966537635371",  cardNum:"9966001699110114",   balance:0.15,   lastUsed:"26.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1V4IC1kDvLneLKsOI4UqTbn9D5QouSs5K?usp=drive_link" },
+  { id:71, type:"اشتراك يومي",                phone:"966547824955",  cardNum:"9966001699065399",   balance:1.10,   lastUsed:"17.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/13mzJ4iif1WBElY-Hd5eMp9P_e0-fiHeZ?usp=drive_link" },
+  { id:72, type:"اشتراك أسبوعي",              phone:"966569226493",  cardNum:"9966001699031858",   balance:0.40,   lastUsed:"16.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1miHXHu2jZAI7zqk_2-_d_3sLT1hu4eQZ?usp=drive_link" },
+  { id:73, type:"اشتراك يومي",                phone:"966549485005",  cardNum:"9966001699120932",   balance:6.55,   lastUsed:"20.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1ubnub8Ba87O1kVWn47DKYuIAu9vwGT6Q?usp=drive_link" },
+  { id:74, type:"اشتراك يومي",                phone:"966537635371",  cardNum:"9966001699110114",   balance:0.15,   lastUsed:"26.05.2026", evidenceUrl:"https://drive.google.com/drive/folders/1V4IC1kDvLneLKsOI4UqTbn9D5QouSs5K?usp=drive_link" },
   { id:75, type:"اشتراك يومي",                phone:"966531499490",  cardNum:"9966001699072174",   balance:39.15,  lastUsed:"08.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/16mX1SYY3i_QlnPiki4xdBn2Xy9Pk5P-V?usp=drive_link" },
   { id:76, type:"اشتراك يومي",                phone:"966570819108",  cardNum:"9966001699116540",   balance:0.45,   lastUsed:"18.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/1DPdomkYzHJKC52NWnxXWlgOvwJFj97Cu?usp=drive_link" },
   { id:77, type:"اشتراك يومي",                phone:"966582886229",  cardNum:"2303139474",         balance:0,      lastUsed:"12.06.2026", evidenceUrl:"https://drive.google.com/drive/folders/1Y1H2i8w4UQqJXB0YZpriZhEN0Ap7snZS?usp=drive_link" },
@@ -143,6 +143,16 @@ const cards = [
   { id:129,type:"اشتراك شهري",                phone:"966561914016",  cardNum:"2303197700",         balance:5.00,   lastUsed:"05.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1uLGAp2xMTDvUgGNxsPIRQNCTr43bTq4s?usp=drive_link" },
   { id:130,type:"اشتراك شهري",                phone:"966545647200",  cardNum:"2303127605",         balance:10.60,  lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1r1eFP3B4Qs4whb8nYBglWhqdaKTNOsBV?usp=drive_link" },
   { id:131,type:"اشتراك شهري",                phone:"966576625790",  cardNum:"2303197687",         balance:0.05,   lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1tKOuZDhJKIui2gt87A4avyoSzg4Ov6C0?usp=drive_link" },
+  { id:132,type:"اشتراك يومي",                phone:"966562250635",  cardNum:"9966001699071530",   balance:0,      lastUsed:"08.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1UXx5R9F4pSgctCyPjr4K2bBBVAXofy_d?usp=drive_link" },
+  { id:133,type:"اشتراك يومي",                phone:"966580137706",  cardNum:"9966001699091081",   balance:0,      lastUsed:"09.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1gtBJgQ6hH6pQ0ELwo3ZlhMaPtuafrxy4?usp=drive_link" },
+  { id:134,type:"اشتراك شهري",                phone:"966536813922",  cardNum:"9966001699128535",   balance:0,      lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1ro9xppVZiboh_WEPsfdIjRo4ZMjAYrlT?usp=drive_link" },
+  { id:135,type:"اشتراك شهري",                phone:"966535559637",  cardNum:"9966001699074025",   balance:0.30,   lastUsed:"06.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1sIhxmVhkwT6O5vxa8EedapqU5VD0KN4k?usp=drive_link" },
+  { id:136,type:"اشتراك شهري",                phone:"966575087687",  cardNum:"9966001699121763",   balance:0.60,   lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1U9txVoq1_9KZNgoS8v3VAkz6F5UzIXNE?usp=drive_link" },
+  { id:137,type:"اشتراك شهري",                phone:"966501707329",  cardNum:"2303244544",         balance:124.65, lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1NxzfmNbx5ybHUFeEa86JErUy4ETjtoRX?usp=drive_link" },
+  { id:138,type:"اشتراك شهري",                phone:"966565364127",  cardNum:"9966001699057192",   balance:0,      lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1qqApJkxlTucxEkiolAniI4Sgm8M7Yy4u?usp=drive_link" },
+  { id:139,type:"اشتراك شهري",                phone:"966594060559",  cardNum:"9966001699126997",   balance:2.75,   lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1D1PsShwHBTW1UjA4K0kzOApXw_msz9qu?usp=drive_link" },
+
+
 ];
 
 
@@ -153,6 +163,8 @@ const TYPE_META = {
   "بطاقة خصم طالب":       { bg:"#FEF6E4", color:"#7A4E00", dot:T.gold    },
   "بطاقة خصم كبار السن":  { bg:"#FDEAEA", color:"#7A1A1A", dot:"#E74C3C" },
 };
+
+
 const tm = t => TYPE_META[t] || { bg:"#F0F0F0", color:"#555", dot:"#aaa" };
 
 const TYPES = ["الكل","اشتراك شهري","اشتراك أسبوعي","اشتراك يومي","بطاقة خصم طالب","بطاقة خصم كبار السن","بطاقة خصم إحتياجات خاصة"];
