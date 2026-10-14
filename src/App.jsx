@@ -151,7 +151,12 @@ const cards = [
   { id:137,type:"اشتراك شهري",                phone:"966501707329",  cardNum:"2303244544",         balance:124.65, lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1NxzfmNbx5ybHUFeEa86JErUy4ETjtoRX?usp=drive_link" },
   { id:138,type:"اشتراك شهري",                phone:"966565364127",  cardNum:"9966001699057192",   balance:0,      lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1qqApJkxlTucxEkiolAniI4Sgm8M7Yy4u?usp=drive_link" },
   { id:139,type:"اشتراك شهري",                phone:"966594060559",  cardNum:"9966001699126997",   balance:2.75,   lastUsed:"11.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1D1PsShwHBTW1UjA4K0kzOApXw_msz9qu?usp=drive_link" },
-
+  { id:140,type:"اشتراك يومي",                phone:"966561394962",  cardNum:"2303197555",         balance:0.20,   lastUsed:"09.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1OCWxL0sG2JTDfziggy75yGsjTkbveUsj?usp=drive_link" },
+  { id:141,type:"اشتراك شهري",                phone:"966576175976",  cardNum:"2303208256",         balance:8.70,   lastUsed:"12.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/17MxHj1Yo0ZfPL19Sfg-W8zmTPW6k12Ww?usp=drive_link" },
+  { id:142,type:"اشتراك شهري",                phone:"966545350232",  cardNum:"9966001699124480",   balance:4.00,   lastUsed:"14.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1LC5egNZdTYTRrdW_nsj0ZQGF1On41e2G?usp=drive_link" },
+  { id:143,type:"اشتراك شهري",                phone:"966533826814",  cardNum:"2303126360",         balance:0.05,   lastUsed:"12.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1ERf34P6oMXG_YjgD9SwobrIf-wKgnZ9A?usp=drive_link" },
+  { id:144,type:"اشتراك شهري",                phone:"966531267539",  cardNum:"9966001699104262",   balance:7.60,   lastUsed:"13.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1xIOARs9LlBkzxdGz_PPCErpn9kuGnU8h?usp=drive_link" },
+  { id:145,type:"اشتراك يومي",                phone:"966570769237",  cardNum:"9966001699117890",   balance:0,      lastUsed:"12.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/16Qb-o8KXV4S3SxGQilNkvdq9DY4Pzeau?usp=drive_link" },
 
 ];
 
