@@ -173,7 +173,7 @@ const cards = [
 
 
 const TYPE_META = {
-  "اشتراك يومي":          { bg:"#95bac2", color:"#0D5F6E", dot:T.teal    },
+  "اشتراك يومي":          { bg:"#b5d9e0", color:"#0D5F6E", dot:T.teal    },
   "اشتراك أسبوعي":        { bg:"#E6F2EC", color:"#1A5C35", dot:"#2ECC71" },
   "اشتراك شهري":          { bg:"#EDE8F5", color:"#4A1A8C", dot:"#8E44AD" },
   "بطاقة خصم طالب":       { bg:"#FEF6E4", color:"#7A4E00", dot:T.gold    },
