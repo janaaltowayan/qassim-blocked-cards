@@ -165,15 +165,15 @@ const cards = [
   { id:151,type:"بطاقة خصم طالب",             phone:"966535418099",  cardNum:"2502046344",         balance:1.76,   lastUsed:"28.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/103qq__nPoSZiD3JCgpdN90EHpik6Gl2A?usp=drive_link" },
   { id:152,type:"اشتراك شهري",                phone:"966535327716",  cardNum:"2303197848",         balance:1.40,   lastUsed:"22.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1Kvvw5-pDrfiyojYeHf3KMSvEV3PzsL0L?usp=drive_link" },
   { id:153,type:"بطاقة خصم طالب",             phone:"966556682437",  cardNum:"2502046780",         balance:25.55,  lastUsed:"28.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1mwCQmYMPyZhX-4SRDzTbgbexIkYaV9Df?usp=drive_link" },
-  { id:155,type:"اشتراك يومي",                phone:"966553960257",  cardNum:"9966001699129236",   balance:0.75,   lastUsed:"27.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1jEs9pLqiIaP8PoEpkog5f_ZqCpKMLZw5?usp=drive_link" },
-  { id:156,type:"اشتراك شهري",                phone:"966576175976",  cardNum:"9966001699129236",   balance:0.75,   lastUsed:"27.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1RSmKf7erPlXwS3NF94X4c1NcTXLqnt5d?usp=drive_link" },
-  { id:157,type:"بطاقة خصم طالب",             phone:"966506340730",  cardNum:"2502046799",         balance:6.00,   lastUsed:"23.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/11_ifRDenh8P5JEY1_d0akbtMNfAKy6Jq?usp=drive_link" },
+  { id:154,type:"اشتراك يومي",                phone:"966553960257",  cardNum:"9966001699129236",   balance:0.75,   lastUsed:"27.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1jEs9pLqiIaP8PoEpkog5f_ZqCpKMLZw5?usp=drive_link" },
+  { id:155,type:"اشتراك شهري",                phone:"966576175976",  cardNum:"9966001699129236",   balance:0.75,   lastUsed:"27.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/1RSmKf7erPlXwS3NF94X4c1NcTXLqnt5d?usp=drive_link" },
+  { id:156,type:"بطاقة خصم طالب",             phone:"966506340730",  cardNum:"2502046799",         balance:6.00,   lastUsed:"23.10.2026" ,evidenceUrl:"https://drive.google.com/drive/folders/11_ifRDenh8P5JEY1_d0akbtMNfAKy6Jq?usp=drive_link" },
 
 ];
 
 
 const TYPE_META = {
-  "اشتراك يومي":          { bg:"#b5d9e0", color:"#0D5F6E", dot:T.teal    },
+  "اشتراك يومي":          { bg:"#f6f6f6", color:"#0D5F6E", dot:T.teal    },
   "اشتراك أسبوعي":        { bg:"#E6F2EC", color:"#1A5C35", dot:"#2ECC71" },
   "اشتراك شهري":          { bg:"#EDE8F5", color:"#4A1A8C", dot:"#8E44AD" },
   "بطاقة خصم طالب":       { bg:"#FEF6E4", color:"#7A4E00", dot:T.gold    },
