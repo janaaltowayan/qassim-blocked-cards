@@ -3,7 +3,7 @@
    ============================================================
 */
 
-const CUSTOMERS = [
+export const CUSTOMERS = [
 
   { type:"اشتراك شهري",             phone:"966549914480", card:"2303209461",       balance:1.05,    date:"18.07.2025", proof:"https://drive.google.com/drive/folders/1BZ2Dhw91CvMEvflahQ5A0l_nMA7dLFc2?usp=drive_link" },
   { type:"اشتراك أسبوعي",           phone:"966502885687", card:"9966001699096255", balance:3.10,    date:"30.06.2025", proof:"https://drive.google.com/drive/folders/1JThUCanrmRuMqpJw2lZgS19bEHML44g0?usp=drive_link" },
@@ -175,6 +175,6 @@ const CUSTOMERS = [
    { type:"اشتراك شهري", phone:"966549914480", card:"2303209461", balance:1.05, date:"18.07.2025", released:"05.11.2026", proof:"", note:"سدد المبلغ" },
    ============================================================ */
 
-const RELEASED = [
+export const RELEASED = [
 
 ];
