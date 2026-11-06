@@ -1,16 +1,22 @@
-# React + Vite
+# قائمة البطاقات المحظورة
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## هيكل المشروع
+```
+index.html        هيكل الصفحة
+css/style.css     التنسيق
+js/data.js        بيانات العملاء  <-- هنا تضيف العملاء وروابط الأدلة
+js/app.js         منطق الصفحة (بحث / ترتيب / عرض)
+assets/           الشعاران وصورة الواجهة
+```
 
-Currently, two official plugins are available:
+## إضافة عميل
+افتح `js/data.js` وانسخ أي سطر والصقه في آخر القائمة (قبل `];`) ثم غيّر القيم،
+وألصق رابط الدليل في `proof`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ملاحظة مهمة
+لازم يبقى المجلد كامل بنفس الترتيب. ارفع المجلد كله (وليس index.html فقط).
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## العملاء الذين سددوا (تبويب "تم فك الحظر")
+في `js/data.js` توجد قائمتان: `CUSTOMERS` (المحظورون) و`RELEASED` (من سددوا).
+لنقل عميل: احذف سطره من `CUSTOMERS`، والصقه في `RELEASED` وأضف `released:"تاريخ فك الحظر"`.
+(`note` اختياري: ملاحظة تظهر في تفاصيل العميل.)

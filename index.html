@@ -1,13 +1,94 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>قائمة البطاقات المحظورة | حافلات القصيم</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>قائمة البطاقات المحظورة | حافلات القصيم</title>
+  <link rel="icon" type="image/icon" href="assets/favicon.png">
+<meta name="description" content="عرض البطاقات المحظورة وتفاصيل العملاء والمخالفات وأدلتها لفريق خدمة العملاء.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 11v2M13 17v2"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><path d="M7.5 7.5h.01"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h12v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2H5a2 2 0 0 1-2-2Z"/><path d="M16 14h.01"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+<symbol id="i-searchx" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8.5 8.5l5 5M13.5 8.5l-5 5"/></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-unlock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></symbol>
+</defs></svg>
+
+<section class="banner">
+  <img class="ph" src="assets/hero.jpg" alt="" width="800" height="866">
+  <div class="wrap bn">
+    <header class="bar">
+      <div class="logos"><img class="sap" src="assets/logo-saptco.png" alt="سابتكو SAPTCO"><i></i><img class="qb" src="assets/logo-qassim.png" alt="حافلات القصيم"></div>
+    </header>
+    <div class="bn-in">
+      <span class="eyebrow"><svg class="i"><use href="#i-users"/></svg>مشروع حافلات القصيم</span>
+      <h1>منصة إدارة البطاقات المحظورة</h1>
+      <p>منصة مخصصة للعرض البطاقات المحظورة بسبب مخالفة سياسة الاشتراكات الخاصة بالنقل العام للمشروع القصيم</p>
+      <div class="stats">
+        <div class="stat"><span class="si"><svg class="i"><use href="#i-ban"/></svg></span><div><small>إجمالي المحظورين</small><b id="total"></b></div></div>
+        <div class="stat"><span class="si"><svg class="i"><use href="#i-ticket"/></svg></span><div><small>اشتراكات</small><b id="s1"></b></div></div>
+        <div class="stat"><span class="si"><svg class="i"><use href="#i-percent"/></svg></span><div><small>بطاقات الخصم</small><b id="s2"></b></div></div>
+        <div class="stat"><span class="si"><svg class="i"><use href="#i-clock"/></svg></span><div><small>أحدث استعمال</small><b id="last"></b></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="panel">
+    <div class="views" id="views" role="tablist" aria-label="القوائم"></div>
+    <form class="tb" id="f" role="search">
+      <label class="field">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" inputmode="numeric" autocomplete="off" placeholder="ابحث برقم الهاتف أو رقم البطاقة" aria-label="بحث">
+        <button class="x" type="button" id="x" hidden>مسح</button><span class="kbd" aria-hidden="true">/</span>
+      </label>
+      <select class="sort" id="sort" aria-label="الترتيب">
+        <option value="list">ترتيب القائمة</option><option value="new">الأحدث استخدامًا</option>
+        <option value="old">الأقدم استخدامًا</option><option value="bal">الأعلى رصيدًا</option>
+        <option value="custom" hidden>ترتيب مخصص</option>
+      </select>
+    </form>
+    <div class="tabs" id="tabs" role="group" aria-label="تصفية حسب نوع البطاقة"></div>
+    <div class="al" id="al" data-s="idle" aria-live="polite" hidden><div class="ic" id="ic"></div><div><b id="st-t"></b><span id="st-s"></span></div></div>
+    <div class="qrow"><div class="qf" id="qf" role="group" aria-label="فلاتر سريعة"></div><div class="cnt" id="info"></div></div>
+    <div class="t" id="table"></div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>حافلات القصيم · سابتكو</span><span></span></div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" role="dialog" aria-label="تفاصيل البطاقة" aria-hidden="true"></aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="fab" id="top" type="button" aria-label="العودة للأعلى"><svg class="i"><use href="#i-up"/></svg></button>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+</body>
 </html>
+
