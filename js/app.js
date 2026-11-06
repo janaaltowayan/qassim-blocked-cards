@@ -3,8 +3,9 @@
    بيانات العملاء في ملف js/data.js
    ============================================================ */
 /* بيانات العملاء في js/data.js — لا تعدّل هنا */
-import { CUSTOMERS } from "./data.js";
+import { CUSTOMERS } from "/data.js";
 
+C:\Users\janaa\blocked-cards\js\data.js
 const TYPE_COLORS = {
   "اشتراك شهري": "t-m",
   "اشتراك أسبوعي": "t-w",
