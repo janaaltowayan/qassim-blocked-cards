@@ -2,12 +2,6 @@
    قائمة البطاقات المحظورة — منطق الصفحة (بحث · ترتيب · عرض)
    بيانات العملاء في ملف js/data.js
    ============================================================ */
-/* بيانات العملاء في js/data.js — لا تعدّل هنا */
-
-
-
-
-
 
 
 const CUSTOMERS = [
@@ -173,27 +167,20 @@ const CUSTOMERS = [
    العملاء الذين سددوا وتم فك الحظر عنهم  (تبويب "تم فك الحظر")
    ============================================================
 
+   البيانات المطلوبة ثلاثة فقط: نوع البطاقة + رقم الهاتف + رقم البطاقة.
+
    لنقل عميل سدّد:
      1) احذف سطره من القائمة CUSTOMERS أعلاه
-     2) الصقه هنا في RELEASED وأضف تاريخ فك الحظر في released
-        (note اختياري: ملاحظة تظهر في تفاصيل العميل)
+     2) اكتب هنا سطرًا بنفس الشكل التالي (احذف علامة // لتفعيل المثال):
 
-   مثال (احذف علامة // لتفعيله):
-   { type:"اشتراك شهري", phone:"966549914480", card:"2303209461", balance:1.05, date:"18.07.2025", released:"05.11.2026", proof:"", note:"سدد المبلغ" },
+   { type:"اشتراك شهري", phone:"966549914480", card:"2303209461" },
    ============================================================ */
 
-export const RELEASED = [
+const RELEASED = [
+  { type:"اشتراك شهري",    phone:"966559755522", card:"9966001399023336" },
+  { type:"بطاقة خصم طالب", phone:"966535230987", card:"2502046522"       },
 
 ];
-
-
-
-
-
-
-
-
-
 
 
 
@@ -216,7 +203,6 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({
   ">": "&gt;",
   '"': "&quot;"
 } [c]));
-
 const cls = t => TYPE_COLORS[t] || "t-o";
 const label = t => esc(t.replace(/^بطاقة /, ""));
 
@@ -245,20 +231,19 @@ const DATA = (typeof CUSTOMERS !== "undefined" ? CUSTOMERS : []).map((c, i) => (
   link: toLink(c.proof)
 }));
 
-/* تنبيهات في Console عند وجود خطأ في البيانات (البطاقة المكررة مسموحة مثل ملف الـ PDF) */
+
+
 const REL = (typeof RELEASED !== "undefined" ? RELEASED : []).map((c, i) => ({
   i: i + 1,
   t: String(c.type || "").trim(),
   c: digits(c.card),
   p: toPhone(c.phone),
-  b: parseFloat(ar2en(c.balance)) || 0,
-  d: toISO(c.date),
-  rd: toISO(c.released),
-  link: toLink(c.proof),
-  note: String(c.note || "").trim()
+  b: 0,
+  d: "0000-00-00",
+  link: ""
 }));
 REL.forEach(r => {
-  if (!/^\d{10,16}$/.test(r.c) || !/^\d{12}$/.test(r.p) || r.rd === "0000-00-00" || !r.t) console.warn("تحقق من بيانات عميل فك الحظر رقم", r.i, RELEASED[r.i - 1]);
+  if (!/^\d{10,16}$/.test(r.c) || !/^\d{12}$/.test(r.p) || !r.t) console.warn("تحقق من بيانات عميل فك الحظر رقم", r.i, RELEASED[r.i - 1]);
 });
 DATA.forEach(r => {
   if (!/^\d{10,16}$/.test(r.c) || !/^\d{12}$/.test(r.p) || r.d === "0000-00-00" || !r.t) console.warn("تحقق من بيانات السطر", r.i, CUSTOMERS[r.i - 1]);
@@ -293,7 +278,7 @@ const COLS = [
   ["d", "آخر استعمال", "cal"],
   ["link", "الدليل", "link"]
 ];
-const cols = () => view === "released" ? [...COLS.slice(0, 6), ["rd", "فك الحظر", "check"]] : COLS;
+const cols = () => view === "released" ? COLS.slice(0, 4) : COLS;
 const fmtD = d => d === "0000-00-00" ? "—" : d.split("-").reverse().join(".");
 const ago = iso => {
   const d = Math.floor((Date.now() - new Date(iso + "T00:00:00")) / 864e5);
@@ -388,28 +373,12 @@ function viewsRender() {
   $("views").innerHTML = `<button class="vw" type="button" role="tab" data-v="blocked" aria-selected="${view==="blocked"}">${ic("ban")}المحظورون<b>${DATA.length}</b></button><button class="vw" type="button" role="tab" data-v="released" aria-selected="${view==="released"}">${ic("unlock")}تم فك الحظر<b>${REL.length}</b></button>`
 }
 
-
-
-
-/*
 function qfRender() {
-  const cb = cur().filter(r => r.b > 0).length,
-    cy = cur().filter(r => r.link).length;
-  const chips = [
-    ["bal", "رصيد متبقي", "wallet", cb, qf.bal],
-    ["yes", "لها دليل", "folder", cy, qf.proof === "yes"],
-    ["no", "بدون دليل", "link", cur().length - cy, qf.proof === "no"]
-  ];
-  const active = qf.bal || qf.proof || type !== "all";
-  $("qf").innerHTML = chips.map(([k, l, g, c, on]) => `<button class="qc" type="button" data-q="${k}" aria-pressed="${on}">${ic(g)}${l}<b>${c}</b></button>`).join("") + (active ? `<button class="qc reset" type="button" data-q="reset">إعادة ضبط</button>` : "")
-}
-*/
-
-
-
-function qfRender() {
+  if (view === "released") {
+    $("qf").innerHTML = type !== "all" ? `<button class="qc reset" type="button" data-q="reset">إعادة ضبط</button>` : "";
+    return
+  }
   const cb = cur().filter(r => r.b > 0).length;
-
   const chips = [
     ["bal", "رصيد متبقي", "wallet", cb, qf.bal]
   ];
@@ -426,10 +395,6 @@ function qfRender() {
       ? `<button class="qc reset" type="button" data-q="reset">إعادة ضبط</button>`
       : "");
 }
-
-
-
-
 
 
 
@@ -454,7 +419,6 @@ function query() {
   };
 }
 
-
 function render() {
   const {
     out,
@@ -473,7 +437,7 @@ function render() {
   if (!term) $("al").hidden = true;
   else if (byPhone.length) alert_("bad", "العميل محظور", phoneCards.length > 1 ? `${phoneCards.length} بطاقات محظورة مرتبطة بهذا الرقم` : `${label(lastP.t)} · بطاقة ${phoneCards[0]} · آخر استعمال ${fmtD(lastP.d)}${byPhone.length > 1 ? ` · ظهرت ${byPhone.length} مرات` : ""}`);
   else if (byCard) alert_("bad", "البطاقة محظورة", `${label(byCard.t)} · رقم الهاتف ${byCard.p} · آخر استعمال ${fmtD(byCard.d)}${cardRows.length > 1 ? ` · ظهرت ${cardRows.length} مرات` : ""}`);
-  else if (relR) alert_("ok", "تم فك الحظر عن العميل", `${label(relR.t)} · بطاقة ${relR.c} · بتاريخ ${fmtD(relR.rd)} · ضمن تبويب «تم فك الحظر»`);
+  else if (relR) alert_("ok", "تم فك الحظر عن العميل", `${label(relR.t)} · بطاقة ${relR.c} · موجود في تبويب «تم فك الحظر»`);
   else if (term.length >= 9 && !out.length) alert_("ok", "غير موجودة في القائمة", "لا توجد بطاقة أو رقم هاتف بهذا الرقم ضمن القوائم");
   else alert_("idle", out.length ? `${out.length} نتيجة مطابقة` : "لا توجد نتيجة", out.length ? "أكمل الرقم لتأكيد الحالة" : "تأكد من الرقم وأعد المحاولة");
 
@@ -486,6 +450,7 @@ function render() {
   };
 
   const maxB = maxOf(cur());
+  const full = view !== "released";
   const head = `<div class="r h">${cols().map(([k,l,g])=>`<button class="th ${k===sortKey?"on":""}" data-s="${k}" type="button" title="ترتيب حسب ${l}">${l}${g?ic(g):""}<s>${k===sortKey?(sortDir>0?"▲":"▼"):"⇅"}</s></button>`).join("")}<span></span></div>`;
   const body = rows.map(r => `
     <div class="r d${r.i===selId?" sel":""}${view==="released"?" rls":""}" data-i="${r.i}" tabindex="0" aria-haspopup="dialog">
@@ -493,13 +458,14 @@ function render() {
       <span class="tyc"><span class="ty ${cls(r.t)}">${label(r.t)}</span></span>
       <span class="f fp"><em class="lb">${ic("phone")}رقم الهاتف</em><span class="pv"><span class="n">${hl(r.p)}</span><button class="cpy" type="button" data-copy="${r.p}" title="نسخ الرقم" aria-label="نسخ رقم الهاتف">${ic("copy")}</button></span></span>
       <span class="f fc"><em class="lb">${ic("card")}رقم البطاقة</em><span class="n">${hl(r.c)}</span></span>
-      <span class="f fb"><em class="lb">${ic("wallet")}الرصيد</em><span class="am"><b class="${r.b?"":"z"}">${r.b.toFixed(2)}</b> <small>ر.س</small></span><i class="mbar" style="--w:${r.b?Math.max(6,Math.round(Math.sqrt(r.b/maxB)*100)):0}%"></i></span>
-      <span class="f fd"><em class="lb">${ic("cal")}آخر استعمال</em><span class="dtw"><span class="n dt">${fmtD(r.d)}</span><small class="rel">${ago(r.d)}</small></span></span>
-      ${view==="released"?`<span class="f pf"><em class="lb">${ic("check")}فك الحظر</em><span class="rl"><b>${ic("check")}${fmtD(r.rd)}</b><small>${ago(r.rd)}</small></span></span>`:`<span class="f pf"><em class="lb">${ic("folder")}الدليل</em>${proofBtn(r)}</span>`}
+      ${full?`      <span class="f fb"><em class="lb">${ic("wallet")}الرصيد</em><span class="am"><b class="${r.b?"":"z"}">${r.b.toFixed(2)}</b> <small>ر.س</small></span><i class="mbar" style="--w:${r.b?Math.max(6,Math.round(Math.sqrt(r.b/maxB)*100)):0}%"></i></span>`:""}
+      ${full?`      <span class="f fd"><em class="lb">${ic("cal")}آخر استعمال</em><span class="dtw"><span class="n dt">${fmtD(r.d)}</span><small class="rel">${ago(r.d)}</small></span></span>`:""}
+      ${full?`<span class="f pf"><em class="lb">${ic("folder")}الدليل</em>${proofBtn(r)}</span>`:""}
       <span class="go" aria-hidden="true">${ic("chev")}</span>
     </div>`).join("");
+  $("table").classList.toggle("rv", view === "released");
   const emptyHtml = view === "released" && !REL.length ?
-    `<div class="empty">${ic("unlock","big")}<div>لا يوجد عملاء تم فك الحظر عنهم حتى الآن</div></div>` :
+    `<div class="empty">${ic("unlock","big")}<div>لا يوجد عملاء تم فك الحظر عنهم حتى الآن</div><small></small></div>` :
     `<div class="empty">${ic("searchx","big")}<div>لا توجد بطاقات مطابقة</div></div>`;
   $("table").innerHTML = out.length ? head + body : emptyHtml;
   $("info").textContent = out.length === cur().length ? `${out.length} بطاقة` : `${out.length} من ${cur().length} بطاقة`;
@@ -509,6 +475,7 @@ function openCard(i) {
   const r = cur()[i - 1],
     pos = viewIds.indexOf(i),
     n = viewIds.length;
+  const full = view !== "released";
   selId = i;
   document.querySelectorAll(".r.d.sel").forEach(e => e.classList.remove("sel"));
   const rw = document.querySelector(`.r.d[data-i="${i}"]`);
@@ -524,12 +491,11 @@ function openCard(i) {
       <small>${ic("phone")}رقم الهاتف</small><span class="big">${r.p}</span>
       <div class="dl">
         <div><span>${ic("card")}رقم البطاقة</span><b class="n">${r.c}</b></div>
-        <div><span>${ic("wallet")}الرصيد</span><b class="am"><b class="${r.b?"":"z"}">${r.b.toFixed(2)}</b> <small>ر.س</small></b></div>
-        <div><span>${ic("cal")}آخر استعمال</span><b class="n dt">${fmtD(r.d)}</b><small class="rel" style="display:block;font-size:11px;color:#97a3ad">${ago(r.d)}</small></div>
-        ${view==="released"?`<div><span>${ic("check")}تاريخ فك الحظر</span><b class="n dt">${fmtD(r.rd)}</b><small class="rel" style="display:block;font-size:11px;color:#97a3ad">${ago(r.rd)}</small></div>`:`<div><span>${ic("hash")}الرقم في القائمة</span><b>${r.i}</b></div>`}
+        ${full?`<div><span>${ic("wallet")}الرصيد</span><b class="am"><b class="${r.b?"":"z"}">${r.b.toFixed(2)}</b> <small>ر.س</small></b></div>
+        <div><span>${ic("cal")}آخر استعمال</span><b class="n dt">${fmtD(r.d)}</b><small class="rel" style="display:block;font-size:11px;color:#97a3ad">${ago(r.d)}</small></div>`:""}
+        <div><span>${ic("hash")}الرقم في القائمة</span><b>${r.i}</b></div>
       </div>
-      ${r.note?`<p class="dnote">${esc(r.note)}</p>`:""}
-      ${proofBtn(r,"lg")}
+      ${full?proofBtn(r,"lg"):""}
       <div class="dnav">
         <button class="dn" type="button" data-nav="-1" ${pos<=0?"disabled":""}>${ic("chev","flip")}السابق</button>
         <span class="dc">${pos+1} / ${n}</span>
