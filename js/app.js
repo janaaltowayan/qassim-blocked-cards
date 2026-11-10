@@ -381,10 +381,9 @@ function viewsRender() {
 }
 
 function qfRender() {
-  if (view === "released" && view==="blocked") {
     $("qf").innerHTML = type !== "all" ? `<button class="qc reset" type="button" data-q="reset">إعادة ضبط</button>` : "";
     return
-  }
+  
 }
 
 
