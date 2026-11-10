@@ -385,22 +385,6 @@ function qfRender() {
     $("qf").innerHTML = type !== "all" ? `<button class="qc reset" type="button" data-q="reset">إعادة ضبط</button>` : "";
     return
   }
-  const cb = cur().filter(r => r.b > 0).length;
-  const chips = [
-    ["bal", "رصيد متبقي", "wallet", cb, qf.bal]
-  ];
-
-  const active = qf.bal || type !== "all";
-
-  $("qf").innerHTML =
-    chips.map(([k, l, g, c, on]) =>
-      `<button class="qc" type="button" data-q="${k}" aria-pressed="${on}">
-        ${ic(g)}${l}<b>${c}</b>
-      </button>`
-    ).join("") +
-    (active
-      ? `<button class="qc reset" type="button" data-q="reset">إعادة ضبط</button>`
-      : "");
 }
 
 
