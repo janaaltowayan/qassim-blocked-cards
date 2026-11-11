@@ -161,6 +161,8 @@ const CUSTOMERS = [
   { type:"اشتراك شهري",             phone:"966580545891", card:"9966001699125907", balance:6.90,    date:"05.11.2026", proof:"https://drive.google.com/drive/folders/1jI8sO3B_ZuxlVdmUyuxlbev-rbFiFD0o?usp=drive_link" },
   { type:"بطاقة خصم طالب",          phone:"966539442175", card:"2502046641",       balance:14.14,   date:"02.11.2026", proof:"https://drive.google.com/drive/folders/17BNG4oJQ5QoSR7mizJ55S_gBpXmpqWuM?usp=drive_link" },
   { type:"اشتراك أسبوعي",           phone:"966571027540", card:"9966001699128372", balance:10.55,   date:"01.11.2026", proof:"https://drive.google.com/drive/folders/1aX5F-kItZxF6Ril2neEqRCh8YmEB_Ab3?usp=drive_link" },
+  { type:"اشتراك يومي",             phone:"966544751083", card:"9966001699038869", balance:0,       date:"09.11.2026", proof:"https://drive.google.com/drive/folders/1yfviVr5RG8fk7AXdrnzirIutvrujThGU?usp=drive_link" },
+
 ];
 
 /* ============================================================
@@ -385,9 +387,6 @@ function qfRender() {
     return
   
 }
-
-
-
 
 
 function query() {
